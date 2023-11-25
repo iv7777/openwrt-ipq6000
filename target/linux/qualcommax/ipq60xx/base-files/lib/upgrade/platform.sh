@@ -20,6 +20,9 @@ platform_do_upgrade() {
 	glinet,gl-ax1800)
 		nand_do_upgrade "$1"
 		;;
+	linksys,mr7350)
+    	platform_do_upgrade_linksys "$1"
+        ;;
 	*)
 		default_do_upgrade "$1"
 		;;

@@ -38,3 +38,20 @@ define Device/glinet_gl-axt1800
 		kmod-fs-exfat kmod-hwmon-pwmfan block-mount kmod-usb-storage kmod-usb2 fdisk
 endef
 TARGET_DEVICES += glinet_gl-axt1800
+
+define Device/linksys_mr7350
+	$(call Device/FitImage)
+	DEVICE_VENDOR := Linksys
+	DEVICE_MODEL := MR7350
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	SOC := ipq6018
+	DEVICE_PACKAGES := kmod-leds-pca963x kmod-usb3 \
+		kmod-usb-ledtrig-usbport kmod-usb-phy-msm
+	KERNEL_SIZE := 8192k
+	UBINIZE_OPTS := -E 5
+	IMAGES := factory.bin sysupgrade.bin
+	IMAGE/factory.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | \
+		append-ubi | linksys-image type=MR7350
+endef
+TARGET_DEVICES += linksys_mr7350
