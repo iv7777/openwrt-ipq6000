@@ -35,6 +35,7 @@ ALLWIFIBOARDS:= \
 	edimax_cax1800 \
 	glinet_gl-ax1800 \
 	glinet_gl-axt1800 \
+  linksys_mr7350 \
 	netgear_rax120v2 \
 	netgear_wax218 \
 	netgear_wax620 \
