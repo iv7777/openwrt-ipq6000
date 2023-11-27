@@ -16,6 +16,15 @@ DEFAULT_PACKAGES += \
 	kmod-leds-gpio kmod-gpio-button-hotplug \
 	kmod-qca-nss-dp kmod-ath11k-ahb \
 	wpad-basic-mbedtls uboot-envtools \
-	e2fsprogs kmod-fs-ext4 losetup
-
+	e2fsprogs kmod-fs-ext4 losetup\
+	kmod-qca-nss-dp \
+	kmod-qca-nss-drv \
+	kmod-qca-nss-drv-bridge-mgr \
+	kmod-qca-nss-drv-pppoe \
+	kmod-qca-nss-ecm \
+	kmod-qca-ssdk \
+	luci-app-cpufreq \
+	nss-firmware-ipq6018 \
+	qca-ssdk-shell
+	
 $(eval $(call BuildTarget))
