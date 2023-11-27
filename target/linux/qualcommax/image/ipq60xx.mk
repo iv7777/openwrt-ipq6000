@@ -46,7 +46,7 @@ define Device/linksys_mr7350
 	BLOCKSIZE := 128k
 	PAGESIZE := 2048
 	SOC := ipq6018
-	DEVICE_PACKAGES := kmod-leds-pca963x kmod-usb3 \
+	DEVICE_PACKAGES := ipq-wifi-linksys_mr7350 kmod-leds-pca963x kmod-usb3 \
 		kmod-usb-ledtrig-usbport kmod-usb-phy-msm
 	KERNEL_SIZE := 8192k
 	UBINIZE_OPTS := -E 5
